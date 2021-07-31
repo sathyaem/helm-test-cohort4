@@ -3,11 +3,12 @@ set -e
 
 echo Namespace = "$1"
 echo Releasename = "$2"
-echo "----------------------Installing pages----------------------------------"
+echo "----------------------Installing pages---------------------------------"
 
+RELEASE_NAME="$2"
 
 NAMESPACE="$1"
-RELEASE_NAME="$2"
+
 
 kubectl get ns "$NAMESPACE" &> /dev/null || kubectl create ns "$NAMESPACE"
 
@@ -19,4 +20,4 @@ sleep 30s
 kubectl get pods -n "$NAMESPACE"
 
 
-echo "----------------------Completed Installation of  pages----------------------------------"
+echo "----------------------Completed Installation of  pages------------------"

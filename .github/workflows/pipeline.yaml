@@ -29,7 +29,5 @@ jobs:
         run: |
           bash ./scripts/install-helm.sh
       - name: Deploy to staging
-        run: |
-          echo ${{ secrets.STAGING_NAMESPACE }} ${{ secrets.RELEASE_NAME }}  > temp.txt
-          cat temp.txt
+        run: |          
           bash ./scripts/deploy.sh ${{ secrets.STAGING_NAMESPACE }} ${{ secrets.RELEASE_NAME }}
