@@ -30,4 +30,4 @@ jobs:
           bash ./scripts/install-helm.sh
       - name: Deploy to staging
         run: |          
-          bash ./scripts/deploy.sh ${{ secrets.STAGING_NAMESPACE }} ${{ secrets.RELEASE_NAME }}
+          bash ./scripts/deploy.sh ${{ secrets.STAGING_NAMESPACE }} ${{ secrets.FAKE_NAME }}
